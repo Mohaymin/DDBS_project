@@ -29,5 +29,13 @@ CREATE OR REPLACE PACKAGE BODY PhoneStats AS
 		dbms_output.put_line('not implemented');
 	END trendingPhonesWeek;
 
+	function get_last_week_date
+		return date
+		IS
+	BEGIN
+		return sysdate - 7;
+	END get_last_week_date;
+
+
 END PhoneStats;
 /
