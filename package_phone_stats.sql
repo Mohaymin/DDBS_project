@@ -1,12 +1,12 @@
 CREATE OR REPLACE PACKAGE PhoneStats as
 
-	procedure show_most_sold_phone();
+	procedure showMostSoldPhone;
 
-	procedure show_most_sold_phone_in_month(month varchar2(2));
+	procedure mostSoldMonth(month in varchar2);
 
-	procedure show_most_sold_phone_in_month_of_each_year(month varchar2(2));
+	procedure mostSoldMonthYear(month in varchar2);
 
-	procedure show_trending_phones_of_the_week();
+	procedure trendingPhonesWeek;
 
 end PhoneStats;
 /

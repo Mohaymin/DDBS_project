@@ -4,7 +4,7 @@ FOR EACH ROW
 BEGIN
 	dbms_output.put_line('price of phone updated');
 	INSERT INTO LogSellingPriceChange
-	VALUES(sysdate, phone_id, :old.price, :new.price);
+	VALUES(sysdate, :new.phone_id, :old.price, :new.price);
 END;
 /
 
@@ -15,7 +15,7 @@ FOR EACH ROW
 BEGIN
 	dbms_output.put_line('purchase cost updated');
 	INSERT INTO LogPurchaseCostChange
-	VALUES(sysdate, phone_id, :old.cost, :new.cost);
+	VALUES(sysdate, :new.phone_id, :old.cost, :new.cost);
 END;
 /
 
@@ -25,6 +25,6 @@ FOR EACH ROW
 BEGIN
 	dbms_output.put_line('enlisted new phones in database');
 	INSERT INTO LogInventoryAddition
-	VALUES(sysdate, phone_id, :old.quantity, :new.quantity);
+	VALUES(sysdate, :new.phone_id, :old.quantity, :new.quantity);
 END;
 /
