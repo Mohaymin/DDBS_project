@@ -30,4 +30,6 @@ BEGIN
 	END LOOP;
 
 END;
-/ 
+/
+
+--TODO: change the query so that it calculates on the basis of the phone's model name instead of the phone's id.
